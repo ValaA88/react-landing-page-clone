@@ -3,15 +3,31 @@
 import './App.css';
 import { css } from '@emotion/react';
 import appleDl from './images/apple_store.svg';
+import conclusion from './images/conclusion.jpeg';
 import logo from './images/doo_logo.svg';
 import mobile from './images/iphone_frame.png';
 import iphoneHero from './images/iphone_hero.jpg';
+import miniImage1 from './images/mini_image1.png';
+import miniImage2 from './images/mini_image2.png';
+import miniImage3 from './images/mini_image3.png';
+import miniImage4 from './images/mini_image4.png';
+import miniImage5 from './images/mini_image5.png';
+import miniImage6 from './images/mini_image6.png';
+import miniImage7 from './images/mini_image7.png';
+import miniImage8 from './images/mini_image8.png';
+import miniImage9 from './images/mini_image9.png';
 import privacyImage1 from './images/privacy_01.jpeg';
 import privacyImage2 from './images/privacy_02_ios.jpeg';
 
 const logoStyles = css``;
 const appleStore = css`
   margin-top: -50px;
+`;
+
+const appleStore2 = css`
+  margin-top: 20px;
+  margin-left: 650px;
+  margin-bottom: 100px;
 `;
 
 const header = css`
@@ -27,6 +43,10 @@ const iphoneImage = css`
   margin-top: 70px;
   margin-left: -35%;
   max-width: 170%;
+`;
+
+const miniImage = css`
+  max-width: 25%;
 `;
 
 const mobileImage = css`
@@ -46,6 +66,10 @@ const privacy1 = css`
 const privacy2 = css`
   padding: 10px 7px;
   max-width: 43%;
+`;
+
+const finalImage = css`
+  margin-left: 90px;
 `;
 
 const headerStyle = css`
@@ -87,8 +111,19 @@ const headerButton = css`
   padding: 1.5em 3em;
 `;
 
-const column = css`
-  gap: 20px;
+const featureCardContainer = css`
+  display: flex;
+  padding: 80px;
+  margin-left: 100px;
+  margin-top: 100px;
+  gap: 80px;
+  color: #6e6d7a;
+  text-align: left;
+  font-weight: 250;
+  font-size: 1.3pc;
+  border-left: 1px solid #edeef3;
+  border-right: 1px solid #edeef3;
+  -webkit-font-smoothing: antialiased;
 `;
 
 const mainText = css`
@@ -109,6 +144,22 @@ const subText = css`
   margin-top: 30px;
   margin-bottom: 100px;
   -webkit-font-smoothing: antialiased;
+`;
+
+const footerButton = css`
+  margin-left: 600px;
+  margin-bottom: 200px;
+  text-align: center;
+  font-size: 0.9em;
+  display: inline-block;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  padding: 30px 50px;
+  border: 1px solid #edeef3;
+  border-radius: 6px;
+  background-color: white;
+  color: #6e6d7a;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 0%);
 `;
 
 function App() {
@@ -140,12 +191,19 @@ function App() {
         <br></br>
         <br></br>
         <section>
-          <div class="column">Create tasks with a clear, achievable goal.</div>
-          <div class="column">
-            Pick a few tasks each day and snooze the rest.
-          </div>
-          <div class="column">
-            Build sustainable habits that feel invisible.
+          <div css={featureCardContainer}>
+            <div>
+              <img css={miniImage} src={miniImage1} alt="mini image1" />
+              <p>Create tasks with a clear, achievable goal.</p>
+            </div>
+            <div>
+              <img css={miniImage} src={miniImage2} alt="mini image2" />
+              <p>Pick a few tasks each day and snooze the rest.</p>
+            </div>
+            <div>
+              <img css={miniImage} src={miniImage3} alt="mini image3" />
+              <p>Build sustainable habits that feel invisible.</p>
+            </div>
           </div>
         </section>
         <br></br>
@@ -219,6 +277,71 @@ function App() {
             <img css={privacy1} src={privacyImage1} alt="privacy image1" />
             <img css={privacy2} src={privacyImage2} alt="privacy image2" />
           </h4>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <h5 css={mainText}>
+            <div>Other things you might be wondering about</div>
+          </h5>
+        </section>
+        <section>
+          <div css={featureCardContainer}>
+            <div>
+              <img css={miniImage} src={miniImage4} alt="mini image4" />
+              <p>
+                Use Siri to create tasks, a new list, or mark items completed.
+              </p>
+            </div>
+            <div>
+              <img css={miniImage} src={miniImage5} alt="mini image5" />
+              <p>
+                Ready for iOS 14. View your most recently due task or up to
+                three recent items from any list.
+              </p>
+            </div>
+            <div>
+              <img css={miniImage} src={miniImage6} alt="mini image6" />
+              <p>
+                Share reminders using iMessage, email, or any other text-based
+                service. Changes sync to all devices.
+              </p>
+            </div>
+            <div>
+              <img css={miniImage} src={miniImage7} alt="mini image7" />
+              <p>
+                Dynamic Type and VoiceOver support for a more universal
+                experience for all.
+              </p>
+            </div>
+            <div>
+              <img css={miniImage} src={miniImage8} alt="mini image8" />
+              <p>
+                Protect sensitive information by requiring authentication when
+                the app opens.
+              </p>
+            </div>
+            <div>
+              <img css={miniImage} src={miniImage9} alt="mini image9" />
+              <p>
+                Sync on all of your iOS and Mac devices using your Apple ID.
+              </p>
+            </div>
+          </div>
+          <button css={footerButton}>view all features</button>
+        </section>
+        <section>
+          <header css={mainText}>
+            <p>Build better habits.</p>
+            <p> Get the to-do app that helps you focus.</p>
+          </header>
+          <img css={appleStore2} src={appleDl} alt="apple store" />
+          <img css={finalImage} src={conclusion} alt="conclusion" />
         </section>
       </main>
       <footer></footer>
